@@ -14,7 +14,7 @@
 		<a href="conceptual-model.php"><button>Conceptual Model</button></a>
 	</nav>
 	<h2>Trailforks User Persona: Jeff</h2>
-	<img src="https://www.outsideonline.com/sites/default/files/styles/img_850-width_flex-height/public/2016/03/09/mbt-101-how-much-to-spend_h.jpg?itok=LV-319Ri" alt="Mountain Biker">
+	<img src="images/stage-7-photography-mountain-biker.jpg" alt="Mountain Biker" width="30%" height="30%">
 	<p>Overview: Jeff likes to mountain bike for fun with his friends.  He enjoys exploring new areas.  He's not into the competition aspect.</p>
 	<p>Age: 32</p>
 	<p>Location: Telluride, Colorado</p>
