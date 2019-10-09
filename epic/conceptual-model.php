@@ -31,6 +31,8 @@
 	<li>routeUserId (FK)</li>
 	<li>routeName</li>
 	<li>routeDetails</li>
+	<li>routeDateTime</li>
+	<li>routeDuration</li>
 	<li>routeCoordinates</li>
 </ul>
 
