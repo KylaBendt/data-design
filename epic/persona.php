@@ -14,6 +14,7 @@
 		<a href="conceptual-model.php"><button>Conceptual Model</button></a>
 	</nav>
 	<h2>Trailforks User Persona: Jeff</h2>
+	<p> Image Credit: <a href="https://unsplash.com/@stage7photography">Stage 7 Photography</a> </p>
 	<img src="images/stage-7-photography-mountain-biker.jpg" alt="Mountain Biker" width="30%" height="30%">
 	<p>Overview: Jeff likes to mountain bike for fun with his friends.  He enjoys exploring new areas.  He's not into the competition aspect.</p>
 	<p>Age: 32</p>
