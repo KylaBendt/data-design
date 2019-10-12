@@ -1,5 +1,5 @@
-drop table if exists users;
 drop table if exists routes;
+drop table if exists users;
 
 create table users(
    userId binary(16) not null,
@@ -7,49 +7,16 @@ create table users(
 	userEmail varchar(128) not null,
 	userHash char(97) not null,
 	unique(userEmail),
-	primary key(userId),
-	index(userEmail)
+	primary key(userId)
 );
 
-
-
-/*create table author(
-	authorId binary(16) not null,
-	authorAvatarUrl varchar(255),
-	authorActivationToken char(32),
-	authorEmail varchar(128) not null,
-	authorHash char(97) not null,
-	authorUsername varchar(32) not null,
-	unique(authorEmail),
-	unique(authorUsername),
-	INDEX(authorEmail),
-	primary key(authorId)
-);*/
-
-/*
-create table tag(
-	tagId binary(16) not null,
-	tagName varchar(32) not null,
-	primary key(tagId)
+create table routes(
+	routeId binary(16) not null,
+	routeUserId binary(16) not null,
+	routeCoordinates varchar(4000),
+	routeDateTime datetime(6),
+	routeDetails multipoint,
+	routeDuration time,
+	foreign key(routeUserId) references users(userId),
+	primary key(routeId)
 );
-
-create table article(
-	articleId binary(16) not null,
-	articleAuthorId binary(16) not null,
-	articleContent varchar(40000) not null,
-	articleDate datetime(6) not null,
-	articleImage VARCHAR(255),
-	index(articleAuthorId),
-	foreign key(articleAuthorId) references author(authorId),
-	primary key(articleId)
-);*/
-
-/*create table articleTag(
-	articleTagArticleId binary(16),
-	articleTagTagId binary(16),
-	index(articleTagArticleId),
-	index(articleTagTagId),
-	foreign key(articleTagArticleId) references article(articleId),
-	foreign key(articleTagTagId) references tag(tagId),
-	primary key(articleTagArticleId, articleTagTagId)
-);*/
