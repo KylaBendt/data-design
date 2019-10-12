@@ -1,6 +1,9 @@
+-- drop tables
+-- routes is dropped first since it has the foreign key
 drop table if exists routes;
 drop table if exists users;
 
+-- create users table
 create table users(
    userId binary(16) not null,
    userActivationToken char(32),
@@ -10,6 +13,8 @@ create table users(
 	primary key(userId)
 );
 
+-- create routes table
+-- email does not need an explicit index because it is automatically created since it is a unique field
 create table routes(
 	routeId binary(16) not null,
 	routeUserId binary(16) not null,
