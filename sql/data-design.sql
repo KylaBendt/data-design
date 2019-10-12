@@ -18,9 +18,9 @@ create table users(
 create table routes(
 	routeId binary(16) not null,
 	routeUserId binary(16) not null,
-	routeCoordinates varchar(4000),
+	routeCoordinates linestring,
 	routeDateTime datetime(6),
-	routeDetails multipoint,
+	routeDetails varchar(2000),
 	routeDuration time,
 	foreign key(routeUserId) references users(userId),
 	primary key(routeId)
