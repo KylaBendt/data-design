@@ -21,7 +21,7 @@ create table routes(
 	routeCoordinates linestring,
 	routeDateTime datetime(6),
 	routeDetails varchar(2000),
-	routeDuration time,
+	routeDuration time(0),
 	foreign key(routeUserId) references users(userId),
 	primary key(routeId)
 );
