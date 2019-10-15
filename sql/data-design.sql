@@ -5,8 +5,8 @@ drop table if exists users;
 
 -- create users table
 create table users(
-   userId binary(16) not null,
-   userActivationToken char(32),
+	userId binary(16) not null,
+	userActivationToken char(32),
 	userEmail varchar(128) not null,
 	userHash char(97) not null,
 	-- this creates a unique index, preventing duplicate emails
