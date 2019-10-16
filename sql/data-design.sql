@@ -19,9 +19,9 @@ create table routes (
 	routeId          BINARY(16) not null,
 	routeUserId      BINARY(16) not null,
 	routeCoordinates LINESTRING,
-	routeDateTime    DATETIME(2),
+	routeStartDateTime    DATETIME(2),
 	routeDetails     VARCHAR(2000),
-	routeDuration    TIME(2),
+	routeEndDateTime    DATETIME(2),
 	foreign key (routeUserId) references users(userId),
 	primary key (routeId)
 );
