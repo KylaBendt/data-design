@@ -4,24 +4,24 @@ drop table if exists routes;
 drop table if exists users;
 
 -- create users table
-create table users(
-	userId binary(16) not null,
-	userActivationToken char(32),
-	userEmail varchar(128) not null,
-	userHash char(97) not null,
+create table users (
+	userId              BINARY(16)   not null,
+	userActivationToken CHAR(32),
+	userEmail           VARCHAR(128) not null,
+	userHash            CHAR(97)     not null,
 	-- this creates a unique index, preventing duplicate emails
-	unique(userEmail),
-	primary key(userId)
+	unique (userEmail),
+	primary key (userId)
 );
 
 -- create routes table
-create table routes(
-	routeId binary(16) not null,
-	routeUserId binary(16) not null,
-	routeCoordinates linestring,
-	routeDateTime datetime(2),
-	routeDetails varchar(2000),
-	routeDuration time(2),
-	foreign key(routeUserId) references users(userId),
-	primary key(routeId)
+create table routes (
+	routeId          BINARY(16) not null,
+	routeUserId      BINARY(16) not null,
+	routeCoordinates LINESTRING,
+	routeDateTime    DATETIME(2),
+	routeDetails     VARCHAR(2000),
+	routeDuration    TIME(2),
+	foreign key (routeUserId) references users(userId),
+	primary key (routeId)
 );
